@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Foodie"
 include ':app'
 include ':network'
+include ':resources'
+include ':home'

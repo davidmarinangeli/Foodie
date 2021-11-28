@@ -1,4 +1,4 @@
-package com.davidmari.foodie.ui.theme
+package com.davidmari.resources.theme
 
 import android.app.Activity
 import android.os.Build
