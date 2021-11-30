@@ -1,4 +1,4 @@
-package com.davidmari.home
+package com.davidmari.home.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
