@@ -1,5 +1,6 @@
 package com.davidmari.home.ui
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.davidmari.home.entities.Recipe
@@ -12,14 +13,18 @@ class HomeViewModel(
 ) {
     private val coroutineScope = CoroutineScope(Job() + Dispatchers.Main)
 
-    val recipesLD: MutableLiveData<List<Recipe>> = MutableLiveData<List<Recipe>>()
+    val recipesLD: MutableLiveData<List<Recipe>> = MutableLiveData()
+
+    init {
+        getRandomRecipes()
+    }
 
     fun getRandomRecipes() {
 
         coroutineScope.launch {
             val result = withContext(Dispatchers.IO) {
                 try {
-                    recipesRepository.getRandomRecipes(20)
+                    recipesRepository.getRandomRecipes(2)
                 } catch (e: Exception) {
                     null
                 }

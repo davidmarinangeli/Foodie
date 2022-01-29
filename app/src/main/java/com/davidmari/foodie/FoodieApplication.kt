@@ -1,6 +1,7 @@
 package com.davidmari.foodie
 
 import android.app.Application
+import com.davidmari.home.homeModule
 import com.davidmari.home.repository.recipesRepositoryModule
 import com.davidmari.network.di.baseNetworkModule
 import org.koin.android.ext.koin.androidContext
@@ -14,7 +15,7 @@ class FoodieApplication : Application() {
         startKoin {
             androidContext(this@FoodieApplication)
             modules(
-                baseNetworkModule, recipesRepositoryModule
+                baseNetworkModule, recipesRepositoryModule, viewModelModule, homeModule,
             )
         }
     }

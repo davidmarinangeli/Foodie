@@ -15,7 +15,7 @@ class RecipesRepository(
     suspend fun getRandomRecipes(number: Int = 1): List<Recipe> {
 
         return withContext(Dispatchers.IO) {
-            return@withContext recipesApi.getRandomRecipes(number)
+            return@withContext recipesApi.getRandomRecipes(number).recipes
         }
     }
 }
