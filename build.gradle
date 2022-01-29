@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        compose_version = '1.1.0-beta04'
-        compose_material_version = '1.0.0-alpha02'
+        compose_version = '1.2.0-alpha02'
+        compose_material_version = '1.0.0-alpha04'
         koin_version= "3.1.4"
         okhttp_version = '5.0.0-alpha.3'
         retrofit_version = '2.9.0'
