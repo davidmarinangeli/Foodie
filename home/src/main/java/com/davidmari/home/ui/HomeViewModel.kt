@@ -19,7 +19,7 @@ class HomeViewModel(
         getRandomRecipes()
     }
 
-    fun getRandomRecipes() {
+    private fun getRandomRecipes() {
 
         coroutineScope.launch {
             val result = withContext(Dispatchers.IO) {

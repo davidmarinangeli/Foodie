@@ -1,19 +1,33 @@
 package com.davidmari.resources.theme
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.davidmari.resources.R
+
+val fontFamily : FontFamily = FontFamily(
+    listOf(
+        Font(R.font.raleway_regular, weight = FontWeight.Normal),
+        Font(R.font.raleway_semibold, weight = FontWeight.SemiBold),
+        Font(R.font.raleway_bold, weight = FontWeight.Bold),
+        Font(R.font.raleway_medium, weight = FontWeight.Medium),
+    ))
 
 // Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
     )
     /* Other default text styles to override
     titleLarge = TextStyle(

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -20,6 +21,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.davidmari.home.entities.Recipe
+import com.davidmari.home.uicomponents.RecipeListItem
 import com.davidmari.resources.theme.FoodieTheme
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.surface
                 ) {
                     Greeting(homeViewModel)
                 }
@@ -55,10 +57,14 @@ fun Greeting(homeViewModel: HomeViewModel?) {
             .fillMaxWidth()
             .fillMaxHeight()
     ) {
-        LazyColumn {
+        LazyRow {
             // Add a single item
-            items(items = recipesList) {
-                Text(it.title ?: "Titolo")
+            items(items = recipesList) { item ->
+                RecipeListItem(
+                    title = item.title ?: "No Title",
+                    ingredientsSize = item.extendedIngredients?.size ?: 0,
+                    readyIn = item.readyInMinutes ?: 0
+                )
             }
 
         }
