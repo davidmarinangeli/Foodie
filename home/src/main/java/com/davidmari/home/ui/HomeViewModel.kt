@@ -30,6 +30,15 @@ class HomeViewModel(
                 }
             }
 
+            result?.forEach { recipe ->
+                val image = try {
+                    recipe.title?.let { recipesRepository.getImage(it) }
+                } catch (e: Exception) {
+                    null
+                }
+                recipe.image = image
+            }
+
             recipesLD.postValue(result)
         }
     }

@@ -24,7 +24,7 @@ fun RecipeListItem(
     title: String = "Greek Salad with a very long name",
     readyIn: Int = 40
 ) {
-    Column(modifier = Modifier.width(210.dp)) {
+    Column(modifier = Modifier.width(210.dp).padding(start = 16.dp, end = 8.dp)) {
         val image: Painter = painterResource(id = com.davidmari.resources.R.drawable.sample_image)
         Image(
             painter = image,
