@@ -1,6 +1,5 @@
 package com.davidmari.home.network
 
-import com.davidmari.home.entities.Recipes
 import com.davidmari.home.entities.imagesEntities.UnsplashResponse
 import com.davidmari.network.NetworkResources.Companion.UNSPLASH_API_KEY
 import retrofit2.http.*

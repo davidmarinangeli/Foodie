@@ -1,11 +1,6 @@
-package com.davidmari.home.entities
+package com.davidmari.home.entities.recipesEntities
 
-
-data class Recipes(
-    val recipes: List<Recipe>
-)
-
-data class Recipe(
+data class RecipeModel(
     val aggregateLikes: Int?,
     val analyzedInstructions: List<Any>?,
     val cheap: Boolean?,
@@ -40,5 +35,4 @@ data class Recipe(
     val veryPopular: Boolean?,
     val weightWatcherSmartPoints: Int?,
     val whole30: Boolean?,
-    val winePairing: WinePairing?
 )

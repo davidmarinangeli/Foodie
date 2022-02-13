@@ -1,4 +1,4 @@
-package com.davidmari.home.entities
+package com.davidmari.home.entities.recipesEntities
 
 data class ExtendedIngredient(
     val aisle: String?,
@@ -6,7 +6,6 @@ data class ExtendedIngredient(
     val consitency: String?,
     val id: Int?,
     val image: String?,
-    val measures: Measures?,
     val meta: List<String>?,
     val name: String?,
     val original: String?,
