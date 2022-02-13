@@ -3,11 +3,8 @@ package com.davidmari.home.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -57,16 +54,34 @@ fun Greeting(homeViewModel: HomeViewModel?) {
             .fillMaxWidth()
             .fillMaxHeight()
     ) {
-        LazyRow {
-            // Add a single item
-            items(items = recipesList) { item ->
-                RecipeListItem(
-                    title = item.title ?: "No Title",
-                    ingredientsSize = item.extendedIngredients?.size ?: 0,
-                    readyIn = item.readyInMinutes ?: 0
-                )
-            }
+        Column() {
 
+            Text(text = "Recommended", style = MaterialTheme.typography.titleMedium)
+            LazyRow {
+
+                // Add a single item
+                items(items = recipesList) { item ->
+                    RecipeListItem(
+                        title = item.title ?: "No Title",
+                        ingredientsSize = item.extendedIngredients?.size ?: 0,
+                        image = item.image,
+                        readyIn = item.readyInMinutes ?: 0
+                    )
+                }
+            }
+            Text(text = "Top Categories", style = MaterialTheme.typography.titleMedium)
+            LazyRow {
+
+                // Add a single item
+                items(items = recipesList) { item ->
+                    RecipeListItem(
+                        title = item.title ?: "No Title",
+                        ingredientsSize = item.extendedIngredients?.size ?: 0,
+                        image = item.image,
+                        readyIn = item.readyInMinutes ?: 0
+                    )
+                }
+            }
         }
     }
 }

@@ -24,20 +24,20 @@ class HomeViewModel(
         coroutineScope.launch {
             val result = withContext(Dispatchers.IO) {
                 try {
-                    recipesRepository.getRandomRecipes(2)
+                    recipesRepository.getRandomRecipes(7)
                 } catch (e: Exception) {
                     null
                 }
             }
 
-            result?.forEach { recipe ->
-                val image = try {
-                    recipe.title?.let { recipesRepository.getImage(it) }
-                } catch (e: Exception) {
-                    null
-                }
-                recipe.image = image
-            }
+//            result?.forEach { recipe ->
+//                val image = try {
+//                    recipe.title?.let { recipesRepository.getImage(it) }
+//                } catch (e: Exception) {
+//                    null
+//                }
+//                recipe.image = image
+//            }
 
             recipesLD.postValue(result)
         }

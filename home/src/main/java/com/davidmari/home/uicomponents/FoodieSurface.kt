@@ -16,7 +16,7 @@ fun FoodieSurface(
     content: @Composable () -> Unit,
 ) {
     Surface(
-        color = MaterialTheme.colorScheme.surface,
+        color = MaterialTheme.colorScheme.surfaceVariant,
         tonalElevation = 8.dp,
         shadowElevation = 8.dp,
         modifier = modifier.clip(RoundedCornerShape(8.dp))

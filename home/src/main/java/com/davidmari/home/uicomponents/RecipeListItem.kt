@@ -14,6 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberImagePainter
 import com.davidmari.resources.theme.Typography
 
 
@@ -22,12 +23,20 @@ import com.davidmari.resources.theme.Typography
 fun RecipeListItem(
     ingredientsSize: Int = 6,
     title: String = "Greek Salad with a very long name",
+    image: String? = null,
     readyIn: Int = 40
 ) {
-    Column(modifier = Modifier.width(210.dp).padding(start = 16.dp, end = 8.dp)) {
-        val image: Painter = painterResource(id = com.davidmari.resources.R.drawable.sample_image)
+    Column(
+        modifier = Modifier
+            .width(210.dp)
+            .padding(start = 16.dp, end = 8.dp)
+    ) {
+        val painter: Painter =
+            if (image == null) painterResource(id = com.davidmari.resources.R.drawable.sample_image) else
+                rememberImagePainter(image)
+
         Image(
-            painter = image,
+            painter = painter,
             contentDescription = "",
             contentScale = ContentScale.Crop,
             modifier = Modifier
