@@ -72,7 +72,8 @@ fun Greeting(homeViewModel: HomeViewModel?) {
                         title = item.title ?: "No Title",
                         ingredientsSize = item.extendedIngredients?.size ?: 0,
                         image = item.image,
-                        readyIn = item.readyInMinutes ?: 0
+                        readyIn = item.readyInMinutes ?: 0,
+                        isPopular = item.veryPopular
                     )
                 }
             }
