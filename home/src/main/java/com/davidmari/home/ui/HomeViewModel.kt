@@ -60,7 +60,7 @@ class HomeViewModel(
                         null
                     }
                 }
-                mealType.size = result ?: 0
+                mealType.size = result?.number ?: 0
             }
 
             categoriesTypesLD.postValue(standardMealTypes)

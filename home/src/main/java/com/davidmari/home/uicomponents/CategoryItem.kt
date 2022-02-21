@@ -17,9 +17,9 @@ import com.davidmari.resources.theme.Typography
 @Preview(showBackground = true)
 @Composable
 fun CategoryItem(onClick: (() -> Unit)? = null, categoryName: String = "Dessert", emoji: String = "\uD83E\uDDC1", recipesCount: Int = 10) {
-    FoodieSurface(onClick = onClick, modifier = Modifier.padding(all = 8.dp).width(108.dp).aspectRatio(1f)) {
+    FoodieSurface(onClick = onClick, modifier = Modifier.padding(all = 8.dp).width(100.dp).aspectRatio(1f)) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-            Text(text = emoji, fontSize = 28.sp)
+            Text(text = emoji, fontSize = 24.sp)
             Text(text = categoryName, style = Typography.bodyMedium, fontWeight = FontWeight.Medium, modifier = Modifier.padding(top = 4.dp))
             Text(text = "$recipesCount ricette", style = Typography.bodySmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 4.dp))
         }

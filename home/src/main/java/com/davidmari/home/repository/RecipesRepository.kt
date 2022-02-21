@@ -1,6 +1,7 @@
 package com.davidmari.home.repository
 
 import com.davidmari.home.entities.recipesEntities.RecipeModel
+import com.davidmari.home.entities.recipesEntities.RecipeTypeResponse
 import com.davidmari.home.network.ImagesApi
 import com.davidmari.home.network.RecipesApi
 import kotlinx.coroutines.Dispatchers
@@ -26,10 +27,10 @@ class RecipesRepository(
     /**
      * This method will retrieve the list of recipes for a given category - FOR THE MOMENT we only need the number of them
      */
-    suspend fun getRecipesForCategory(mealType: String): Int {
+    suspend fun getRecipesForCategory(mealType: String): RecipeTypeResponse {
 
         return withContext(Dispatchers.IO) {
-            return@withContext recipesApi.getRecipesForCategory(mealType).number
+            return@withContext recipesApi.getRecipesForCategory(mealType)
         }
     }
 

@@ -28,7 +28,9 @@ fun RecipeListItem(
     title: String = "Greek Salad with a very long name",
     image: String? = null,
     readyIn: Int = 40,
-    isPopular: Boolean? = true
+    itemIndex: Int = 0,
+    isPopular: Boolean? = true,
+    score: Double? = 2.0
 ) {
     FoodieSurface(
         onClick = { /*TODO*/ }, modifier = Modifier
@@ -46,7 +48,7 @@ fun RecipeListItem(
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(120.dp)
+                        .height(200.dp)
                 )
                 Text(
                     text = title,
@@ -70,14 +72,19 @@ fun RecipeListItem(
                     color = colorScheme.primary
                 )
             }
-            if (isPopular == true){
+            if (isPopular == true || (score ?: 0.0) > 70.0) {
                 Box(
                     modifier = Modifier
                         .align(Alignment.TopEnd)
-                        .padding(end = 8.dp,top = 8.dp)
+                        .padding(end = 8.dp, top = 8.dp)
                         .background(colorScheme.primary, shape = RoundedCornerShape(4.dp))
                 ) {
-                    Text(text = "Popular".uppercase(), style = Typography.labelSmall, color = colorScheme.onPrimary, modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp))
+                    Text(
+                        text = "Popular".uppercase(),
+                        style = Typography.labelSmall,
+                        color = colorScheme.onPrimary,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                    )
                 }
             }
         }

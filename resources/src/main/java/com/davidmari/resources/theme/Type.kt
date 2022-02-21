@@ -19,6 +19,16 @@ val fontFamily : FontFamily = FontFamily(
 
 // Set of Material typography styles to start with
 val Typography = Typography(
+    headlineMedium = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 28.sp,
+    ),
+    headlineSmall = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 24.sp,
+    ),
     bodyLarge = TextStyle(
         fontFamily = fontFamily,
         fontWeight = FontWeight.SemiBold,
@@ -41,7 +51,7 @@ val Typography = Typography(
     labelSmall = TextStyle(
         fontFamily = fontFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 8.sp,
+        fontSize = 12.sp,
     )
     /* Other default text styles to override
     titleLarge = TextStyle(
