@@ -10,6 +10,10 @@ Just like [Macaw](https://github.com/davidmarinangeli/Macaw), Foodie is a Jetpac
 
 The app uses the spectacular [Spoonacular](https://spoonacular.com/food-api) APIs (heh) to fetch some recipes and some food categories with a brand new, adaptive, glamorous, **Material You** dress.
 
+It uses four main modules ( resources, home, network, app ) to split the roles of each part of the app, Compose **1.2.0-alpha04** and Material3 **1.0.0-alpha06**.
+
+## Design
+
 Thanks to the new [Material 3 library](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary) ( in alpha right now ) it was possible to create a palette of [Dynamic Colors](https://m3.material.io/styles/color/dynamic-color/overview), that will change the entire app's style basing on the smartphone's wallpaper ( Android 12 and above ).
 
 I also played with the [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/#/dynamic) to easily create and export a default palette, based on a wallpaper of my choice, for devices below Android 12. Check it out! 
