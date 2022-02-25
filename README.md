@@ -1,8 +1,6 @@
 # Foodie 🍔
 
-<img src="https://raw.githubusercontent.com/davidmarinangeli/Foodie/master/pawel-czerwinski-ruJm3dBXCqw.jpg" width="300" alignment="center" />
-
-[![Dynamic Colors Demo](https://img.youtube.com/vi/oJLn45-B_LI/0.jpg)](https://youtu.be/oJLn45-B_LI)
+https://user-images.githubusercontent.com/19487461/155809594-7d1b9211-45c9-439b-88b4-76ea423cfed0.mov
 
 ## Yet another Jetpack Compose playground project 
 
@@ -19,3 +17,6 @@ I also played with the [Material Theme Builder](https://material-foundation.gith
 Resources for designers: 
 [Visualizing dynamic color in your app](https://codelabs.developers.google.com/visualize-dynamic-color#0)
 [Material Design 3 Kit](https://www.figma.com/community/file/1035203688168086460)
+
+<img src="https://raw.githubusercontent.com/davidmarinangeli/Foodie/master/pawel-czerwinski-ruJm3dBXCqw.jpg" width="300" alignment="center" />
+
