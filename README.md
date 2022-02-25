@@ -1,5 +1,7 @@
 # Foodie 🍔
 
+<img src="https://raw.githubusercontent.com/davidmarinangeli/Foodie/master/pawel-czerwinski-ruJm3dBXCqw.jpg" width="300" alignment="center" />
+
 ## Yet another Jetpack Compose playground project 
 
 Just like [Macaw](https://github.com/davidmarinangeli/Macaw), Foodie is a Jetpack Compose app built to play with the brand new [Material 3](https://m3.material.io/) libraries and guidelines.
