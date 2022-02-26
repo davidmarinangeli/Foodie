@@ -24,4 +24,23 @@ Resources for designers:
 [Visualizing dynamic color in your app](https://codelabs.developers.google.com/visualize-dynamic-color#0)
 [Material Design 3 Kit](https://www.figma.com/community/file/1035203688168086460)
 
+## Creating Jetpack Compose components 
 
+I used some custom and reusable components such as FoodieSurface and I plan to reuse dimens and shapes in the future, using the LocalComposition tools and other stuff. Read more about building a design system in compose [in this article](https://proandroiddev.com/building-design-system-with-jetpack-compose-1208c250ae75)
+
+    @Composable
+    fun FoodieSurface(
+      onClick: (() -> Unit)?,
+      modifier: Modifier = Modifier,
+      content: @Composable () -> Unit,
+    ) {
+      Surface(
+          color = MaterialTheme.colorScheme.surfaceVariant,
+          tonalElevation = 8.dp,
+          shadowElevation = 8.dp,
+          modifier = modifier.clip(RoundedCornerShape(8.dp))
+              .let { if (onClick != null) it.clickable(onClick = onClick) else it }
+      ) {
+          content()
+      }
+    }
